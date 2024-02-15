@@ -1,0 +1,24 @@
+    <!DOCTYPE html>
+        <head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+          {% if title %}
+          <title>{{ title }}</title>
+          {% else %}
+          <title>Welcome</title>
+          {% endif %}
+                  <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+                  <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-icons.css')}}">		  
+                  
+        </head>
+        <body>
+            <!--<div><a href="/">Home</a></div>-->
+           <div><a href="/"><i class="bi bi-house"></i></a></div>
+            <hr>
+            {% block content %}{% endblock %}
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+    </html>
+
